@@ -1,11 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
+import './index.css';
+import Header from './Pages/Header';
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Button variant='warning'>İçerik </Button>
-    </div>
+ 
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>
+ 
   );
 }
 
