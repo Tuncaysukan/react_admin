@@ -10,3 +10,14 @@ a {
   margin-right: 15px;
 }
 
+.logo{
+  color: black;
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.logo:hover{
+  color: rgb(243, 4, 4);
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
