@@ -15,15 +15,24 @@ class UserController extends Controller
         $user->email=$request->email;
         $user->password=Hash::make($request->password);
         if ($user->save()) {
-            return response()->json([
-                'status'=>'200',
-                'body'=>'success' 
-            ]);
+            return response()->json($user);
         }else{
             return response()->json([
                 'status'=>'400',
                 'body'=>'Error '
             ]);
         }
+    }
+
+    function login(Request $request)
+    {
+        $user= User::where('email',$request->email)->first();
+        if ($user and HASH::check($request->password,$user->password)) {
+            return $user; 
+        }else{return ['error'=>'E Mail  veya  şifreniz  hatalı  kontrol edin'];
+        }
+       
+        
+    
     }
 }
