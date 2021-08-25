@@ -28,7 +28,7 @@ class UserController extends Controller
     {
         $user= User::where('email',$request->email)->first();
         if ($user and HASH::check($request->password,$user->password)) {
-            return $user; 
+            return [$user]; 
         }else{return ['error'=>'E Mail  veya  şifreniz  hatalı  kontrol edin'];
         }
        
