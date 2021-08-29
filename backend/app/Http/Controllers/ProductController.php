@@ -12,11 +12,11 @@ class ProductController extends Controller
     {
        
        $product=new ProductModel;
-    //    $file=$request->file;
+     $file='Path_Yolu';
        $product->name=$request->name;
        $product->description=$request->description;
        $product->price=$request->price;
-       //$product->file_path=$request->file('file_path')->store('products');
+       $product->file_path=$file;
      
        $product->save();
         return $product;

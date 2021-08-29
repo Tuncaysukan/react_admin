@@ -17,7 +17,7 @@ function Login() {
             body:JSON.stringify(data)
         });
         result= await result.json();
-      localStorage.setItem("UserInfo",JSON.stringify(result))       
+      localStorage.setItem("UserInfo",JSON.stringify(result))        
     }
    
     return (

@@ -9,20 +9,15 @@ class UserController extends Controller
 {
     function register(Request $request)
     {
+         
         $user=new User;
 
         $user->name=$request->name;
         $user->email=$request->email;
         $user->password=Hash::make($request->password);
         if ($user->save()) {
-            return response()->json($user);
-        }else{
-            return response()->json([
-                'status'=>'400',
-                'body'=>'Error '
-            ]);
-        }
-    }
+            return $user;
+    }}
 
     function login(Request $request)
     {
