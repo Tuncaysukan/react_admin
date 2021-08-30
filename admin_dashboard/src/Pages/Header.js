@@ -22,7 +22,8 @@ function Header() {
               localStorage.getItem('UserInfo') ?
                 <div>
                   <Link to='/add' >Add Product</Link>
-                  <Link to='/update' >Update Product</Link>
+                  <Link to='/update/:id' >Update Product</Link>
+                  <Link to='/list' >Product List </Link>
                 </div> :
                 <div>
                   <Link to='/login' >Login </Link>

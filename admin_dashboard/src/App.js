@@ -6,6 +6,7 @@ import Login from './Pages/Login';
 import AddProduct from './Pages/AddProduct';
 import Register from './Pages/Register';
 import UpdateProduct from './Pages/UpdateProduct';
+import List from './Pages/ProductList';
 function App() {
   return (
  
@@ -23,6 +24,9 @@ function App() {
     </Route>
     <Route path='/update'>
       <UpdateProduct/>
+    </Route>
+    <Route path='/list'>
+      <List/>
     </Route>
 
   
